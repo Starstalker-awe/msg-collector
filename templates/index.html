@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Send Me A Message!{% endblock %}
+{% block body %}
+{% if msg %}
+		<h1 style="color:red">{{msg}}</h1>
+{% endif %}
+		<h1>Send me a message that nobody else will ever see</h1>
+		<form method="POST" action="/">
+			<input type="text" name="profile" placeholder="(option) Quora/Discord name" maxlength="200">
+			<input type="textarea" name="message" placeholder="Message for me" maxlength="2000">
+			<input type="submit" value="Send Message!">
+		</form>
+{% endblock %}
